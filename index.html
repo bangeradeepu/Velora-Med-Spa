@@ -1,0 +1,916 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Velora Med Spa · Non-surgical treatments at Block 37, Chicago</title>
+<meta name="description" content="Non-surgical face and neck lifts, Botox, LED therapy, facials and body treatments in downtown Chicago. Book a free consultation with Velora Med Spa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --petal:#F3F3EC;      /* page base, a pale sage-ivory drawn from the logo green */
+  --paper:#FBFBF7;      /* raised surfaces */
+  --ink:#24251A;        /* olive-black text */
+  --wine:#5E5D33;       /* primary: logo green, deepened so white text passes contrast */
+  --olive:#666536;      /* their logo green, deepened for text contrast */
+  --leaf:#737243;       /* exact logo green */
+  --orchid:#D9D4A2;     /* light gold-sage highlight for dark sections */
+  --sage:#E3E3D1;
+  --line:rgba(36,37,26,.14);
+  --muted:#5F6052;
+  --serif:"Bodoni Moda", Didot, "Times New Roman", serif;
+  --sans:"Jost", "Helvetica Neue", Arial, sans-serif;
+  --gutter:clamp(16px,4vw,56px);
+  --max:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--petal);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;font-weight:400;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
+:focus-visible{outline:2px solid var(--wine);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* type scale (1.25 ratio) */
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spacing:-.01em}
+h1{font-size:clamp(3rem,6.4vw,6.2rem);font-variation-settings:"opsz" 96}
+.hero h1 .ln{white-space:nowrap}
+h2{font-size:clamp(2.2rem,5vw,4.2rem);font-variation-settings:"opsz" 72}
+h3{font-size:clamp(1.4rem,2.2vw,1.9rem);line-height:1.15}
+.lede{font-size:clamp(1.05rem,1.4vw,1.25rem);color:var(--muted);max-width:34em;font-weight:300}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.6em;padding:1em 1.6em;border-radius:999px;font-weight:500;font-size:1rem;text-decoration:none;transition:background .25s,color .25s,transform .25s}
+.btn-primary{background:var(--wine);color:#fff}
+.btn-primary:hover{background:#4B4A28;transform:translateY(-1px)}
+.btn-ghost{border:1px solid var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--petal)}
+.btn svg{width:18px;height:18px}
+
+/* ---------- announcement + nav ---------- */
+.announce{background:var(--wine);color:#fff;text-align:center;font-size:.9rem;padding:.55em var(--gutter)}
+.announce a{color:#fff;text-underline-offset:3px}
+.nav{position:sticky;top:0;z-index:50;background:rgba(243,243,236,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s}
+.nav.scrolled{border-color:var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:78px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--leaf)}
+.brand-mark{width:30px;height:38px}
+.brand-word{font-family:var(--serif);font-size:1.45rem;letter-spacing:.14em;line-height:1;font-weight:500}
+.brand-word small{display:block;font-family:var(--sans);font-size:.55rem;letter-spacing:.42em;margin-top:5px;font-weight:500}
+.nav-links{display:flex;gap:30px;list-style:none;font-size:.97rem}
+.nav-links a{text-decoration:none;position:relative;padding:4px 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{display:flex;align-items:center;gap:18px}
+.nav-phone{text-decoration:none;font-weight:500;font-size:.97rem}
+.nav .btn{padding:.75em 1.3em;font-size:.95rem}
+.menu-btn{display:none;width:44px;height:44px;align-items:center;justify-content:center}
+.menu-btn span{display:block;width:22px;height:1.5px;background:var(--ink);position:relative}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0;width:22px;height:1.5px;background:var(--ink)}
+.menu-btn span::before{top:-7px}.menu-btn span::after{top:7px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:clamp(40px,6vw,80px) 0 clamp(60px,8vw,110px);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero-where{display:flex;align-items:center;gap:10px;font-size:.98rem;color:var(--olive);font-weight:500;margin-bottom:26px}
+.hero-where svg{width:18px;height:18px}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .ln > span{display:inline-block}
+.hero h1 .ln:nth-child(2){padding-left:1.1em;font-style:italic;color:var(--wine)}
+.hero .lede{margin:30px 0 36px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:42px;padding-top:26px;border-top:1px solid var(--line);list-style:none;font-size:.97rem}
+.hero-facts li{display:flex;align-items:center;gap:9px}
+.hero-facts svg{width:20px;height:20px;color:var(--leaf);flex:none}
+
+.hero-art{position:relative;aspect-ratio:4/5;max-width:520px;justify-self:end;width:100%}
+.arch{position:absolute;overflow:hidden;border-radius:999px 999px 18px 18px;background:var(--sage)}
+.arch img{width:100%;height:115%;object-fit:cover}
+.arch-main{inset:0 0 0 12%;clip-path:inset(0% 0% 0% 0% round 999px 999px 18px 18px)}
+.arch-small{width:42%;aspect-ratio:3/4;left:-4%;bottom:-6%;border:6px solid var(--petal);border-radius:999px 999px 14px 14px}
+.leaf-mark{position:absolute;right:-6%;top:-5%;width:34%;color:var(--leaf);z-index:3;pointer-events:none}
+.leaf-mark path{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.hero-badge{position:absolute;right:-2%;bottom:12%;background:var(--paper);border-radius:16px;padding:14px 18px;box-shadow:0 18px 40px -18px rgba(94,93,51,.35);z-index:4;max-width:220px}
+.hero-badge strong{display:block;font-family:var(--serif);font-size:1.35rem;font-weight:500;line-height:1.1;color:var(--wine)}
+.hero-badge span{font-size:.88rem;color:var(--muted)}
+
+/* ---------- treatments menu ---------- */
+.section{padding:clamp(80px,11vw,150px) 0}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end;margin-bottom:clamp(40px,6vw,72px)}
+.sec-head p{color:var(--muted);max-width:30em;justify-self:end}
+.menu{list-style:none;border-top:1px solid var(--ink)}
+.menu li{border-bottom:1px solid var(--line)}
+.menu a{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1.4fr) auto;gap:28px;align-items:baseline;padding:28px 6px;text-decoration:none;transition:padding .35s,background .35s}
+.menu a:hover{padding-left:18px;background:rgba(255,250,251,.7)}
+.menu h3{transition:color .3s}
+.menu a:hover h3{color:var(--wine)}
+.menu .desc{color:var(--muted);font-size:1rem}
+.menu .price{font-family:var(--serif);font-size:1.15rem;white-space:nowrap;text-align:right;color:var(--olive)}
+.menu .price small{display:block;font-family:var(--sans);font-size:.8rem;color:var(--muted)}
+.menu .thumb{display:none}
+.menu-group{font-family:var(--sans);font-size:.95rem;font-weight:500;color:var(--olive);padding:34px 6px 10px;border-bottom:1px solid var(--line)}
+.preview{position:fixed;left:0;top:0;width:260px;aspect-ratio:4/5;border-radius:999px 999px 14px 14px;overflow:hidden;pointer-events:none;z-index:40;opacity:0;transform:translate(-50%,-50%) scale(.8);box-shadow:0 30px 60px -20px rgba(36,37,26,.45)}
+.preview img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .25s}
+.preview img.on{opacity:1}
+
+/* ---------- results ---------- */
+.results{background:var(--paper)}
+.ba-grid{max-width:1000px;display:grid;grid-template-columns:74fr 89fr;gap:clamp(20px,3vw,40px);align-items:start}
+.ba{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:var(--ratio);background:var(--sage);touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.ba .img{position:absolute;inset:0;background-image:var(--src);background-size:200% 100%;background-repeat:no-repeat}
+.ba .before{background-position:0 0}
+.ba .after{background-position:100% 0;clip-path:inset(0 0 0 var(--pos,50%))}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:#fff;transform:translateX(-1px);pointer-events:none}
+.ba .handle::after{content:"";position:absolute;top:50%;left:50%;width:46px;height:46px;border-radius:50%;background:#fff;transform:translate(-50%,-50%);box-shadow:0 6px 20px rgba(0,0,0,.25);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235E5D33' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l-6 6 6 6M15 6l6 6-6 6'/%3E%3C/svg%3E");background-size:22px;background-position:center;background-repeat:no-repeat}
+.ba .tag{position:absolute;bottom:14px;font-size:.85rem;font-weight:500;background:rgba(255,250,251,.92);padding:.3em .8em;border-radius:999px;pointer-events:none}
+.ba .tag.l{left:14px}.ba .tag.r{right:14px}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba-cap{margin-top:14px;font-size:.95rem;color:var(--muted)}
+.ba-cap strong{color:var(--ink);font-weight:500}
+.ba-note{margin-top:28px;font-size:.85rem;color:var(--muted)}
+
+/* ---------- first visit (sequence) ---------- */
+.steps{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,56px);margin-top:20px}
+.stem{position:absolute;left:0;right:0;top:27px;height:1px;background:var(--line)}
+.stem i{position:absolute;inset:0;background:var(--wine);transform-origin:left;transform:scaleX(0)}
+.step{position:relative}
+.step .num{width:55px;height:55px;border-radius:50%;background:var(--petal);border:1px solid var(--wine);display:grid;place-items:center;font-family:var(--serif);font-size:1.4rem;color:var(--wine);margin-bottom:26px;position:relative;z-index:1}
+.step h3{margin-bottom:12px}
+.step p{color:var(--muted);max-width:24em}
+
+/* ---------- offer ---------- */
+.offer{background:#4A4925;color:#fff;position:relative;overflow:hidden}
+.offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,90px);align-items:center}
+.offer h2{color:#fff}
+.offer .lede{color:rgba(255,255,255,.78)}
+.offer-photo{border-radius:999px 999px 18px 18px;overflow:hidden;aspect-ratio:4/5;max-width:460px}
+.offer-photo img{width:100%;height:112%;object-fit:cover}
+.price-card{margin:34px 0;border-top:1px solid rgba(255,255,255,.25)}
+.price-row{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.25)}
+.price-row h3{color:#fff;font-size:clamp(1.25rem,2vw,1.6rem)}
+.price-row p{color:rgba(255,255,255,.72);font-size:.95rem;margin-top:4px}
+.price-row .amt{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.5rem);color:var(--orchid);white-space:nowrap}
+.offer .btn-primary{background:#fff;color:var(--wine)}
+.offer .btn-primary:hover{background:var(--orchid);color:var(--ink)}
+.offer small{display:block;margin-top:14px;color:rgba(255,255,255,.65);font-size:.88rem}
+
+/* ---------- team ---------- */
+.team-grid{display:grid;grid-template-columns:1fr 1fr 1.1fr;gap:clamp(20px,3vw,40px);align-items:end}
+.person img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;background:var(--sage)}
+.person h3{margin-top:20px}
+.person .role{color:var(--olive);font-weight:500;font-size:.97rem;margin-top:4px}
+.person p{color:var(--muted);font-size:.98rem;margin-top:10px;max-width:26em}
+.team-intro p{color:var(--muted);margin-top:22px;max-width:28em}
+.team-intro .btn{margin-top:30px}
+
+/* ---------- testimonials ---------- */
+.quotes{background:var(--sage)}
+.quote{max-width:980px}
+.quote + .quote{margin-top:clamp(56px,8vw,96px);margin-left:auto;text-align:right}
+.quote blockquote{font-family:var(--serif);font-size:clamp(1.7rem,3.6vw,3rem);line-height:1.2;font-style:italic;font-weight:400}
+.quote figcaption{margin-top:22px;font-size:1rem;color:var(--olive);font-weight:500}
+
+/* ---------- faq ---------- */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,90px)}
+.faq-grid > div > p{color:var(--muted);margin-top:22px;max-width:24em}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--ink)}
+summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;cursor:pointer;font-family:var(--serif);font-size:clamp(1.15rem,1.8vw,1.45rem)}
+summary::-webkit-details-marker{display:none}
+summary .pm{position:relative;width:16px;height:16px;flex:none}
+summary .pm::before,summary .pm::after{content:"";position:absolute;left:0;top:50%;width:16px;height:1.5px;background:var(--wine);transition:transform .3s}
+summary .pm::after{transform:rotate(90deg)}
+details[open] summary .pm::after{transform:rotate(0)}
+details .ans{padding:0 0 26px;color:var(--muted);max-width:40em}
+
+/* ---------- booking ---------- */
+.book{background:var(--paper)}
+.book-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(32px,6vw,90px);align-items:start}
+.visit{margin-top:34px;display:grid;gap:22px}
+.visit div{display:flex;gap:14px}
+.visit svg{width:22px;height:22px;color:var(--leaf);flex:none;margin-top:3px}
+.visit strong{display:block;font-weight:500}
+.visit span,.visit a{color:var(--muted);text-decoration:none}
+.visit a:hover{color:var(--wine)}
+.map{margin-top:34px;border-radius:18px;overflow:hidden;aspect-ratio:16/10;background:var(--sage)}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.4) sepia(.15)}
+
+.form{background:var(--petal);border-radius:24px;padding:clamp(24px,4vw,44px);position:relative}
+.progress{display:flex;gap:8px;margin-bottom:30px}
+.progress i{flex:1;height:3px;border-radius:3px;background:var(--line);overflow:hidden;position:relative}
+.progress i::after{content:"";position:absolute;inset:0;background:var(--wine);transform:scaleX(0);transform-origin:left;transition:transform .45s ease}
+.progress i.done::after{transform:scaleX(1)}
+.fstep{display:none}
+.fstep.active{display:block}
+.fstep legend{font-family:var(--serif);font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.15;margin-bottom:8px}
+.fstep .hint{color:var(--muted);font-size:.95rem;margin-bottom:24px}
+fieldset{border:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip span{display:inline-block;padding:.7em 1.15em;border:1px solid var(--line);border-radius:999px;background:var(--paper);cursor:pointer;transition:all .2s;font-size:.98rem}
+.chip span:hover{border-color:var(--wine)}
+.chip input:checked + span{background:var(--wine);color:#fff;border-color:var(--wine)}
+.chip input:focus-visible + span{outline:2px solid var(--wine);outline-offset:2px}
+.field{display:block;margin-bottom:16px}
+.field span{display:block;font-size:.92rem;font-weight:500;margin-bottom:6px}
+.field input{width:100%;font:inherit;padding:.85em 1em;border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink)}
+.field input:focus{outline:none;border-color:var(--wine);box-shadow:0 0 0 3px rgba(94,93,51,.12)}
+.field input[aria-invalid="true"]{border-color:#B3261E}
+.err{color:#B3261E;font-size:.9rem;margin-top:12px;min-height:1.2em}
+.form-nav{display:flex;justify-content:space-between;align-items:center;margin-top:28px;gap:12px}
+.back{font-weight:500;text-decoration:underline;text-underline-offset:4px;padding:.5em 0}
+.back[hidden]{visibility:hidden;display:inline}
+.fine{font-size:.85rem;color:var(--muted);margin-top:18px}
+.success{display:none;text-align:center;padding:30px 0}
+.success.active{display:block}
+.success svg{width:64px;height:64px;color:var(--leaf);margin:0 auto 20px}
+.success h3{margin-bottom:10px}
+.success p{color:var(--muted)}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:rgba(255,255,255,.8);padding:72px 0 120px;font-size:.97rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.foot-word{font-family:var(--serif);font-size:2.2rem;color:#fff;letter-spacing:.12em;line-height:1}
+.foot-word small{display:block;font-family:var(--sans);font-size:.8rem;letter-spacing:.35em;margin-top:8px;color:rgba(255,255,255,.65)}
+footer h4{font-weight:500;color:#fff;margin-bottom:14px;font-size:1rem}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--orchid)}
+.foot-bottom{margin-top:56px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.88rem;color:rgba(255,255,255,.55)}
+
+/* ---------- mobile sticky CTA ---------- */
+.mbar{display:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:1020px){
+  .nav-links,.nav-phone{display:none}
+  .hero-grid,.offer-grid,.book-grid,.faq-grid,.ba-grid{grid-template-columns:1fr}
+  .hero-art{justify-self:center;max-width:440px;margin-top:20px}
+  .team-grid{grid-template-columns:1fr 1fr}
+  .team-intro{grid-column:1/-1;order:-1}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .offer-photo{max-width:380px}
+}
+@media (max-width:720px){
+  body{font-size:16px}
+  .announce{font-size:.82rem}
+  .nav-inner{height:66px}
+  .brand-word{font-size:1.25rem}
+  .nav .btn{display:none}
+  .menu-btn{display:flex}
+  .hero h1 .ln:nth-child(2){padding-left:.5em}
+  .hero-badge{right:0;bottom:6%;padding:10px 14px}
+  .hero-badge strong{font-size:1.1rem}
+  .leaf-mark{right:-2%}
+  .sec-head{grid-template-columns:1fr}
+  .sec-head p{justify-self:start}
+  .menu a{grid-template-columns:72px 1fr;gap:6px 16px;padding:20px 0}
+  .menu a:hover{padding-left:0}
+  .menu .thumb{display:block;grid-row:span 3;width:72px;height:88px;object-fit:cover;border-radius:999px 999px 8px 8px}
+  .menu .price{text-align:left}
+  .menu .price small{display:inline;margin-left:6px}
+  .steps{grid-template-columns:1fr;gap:36px}
+  .stem{left:27px;right:auto;top:0;bottom:0;width:1px;height:auto}
+  .stem i{transform-origin:top;transform:scaleY(0)}
+  .step{padding-left:80px}
+  .step .num{position:absolute;left:0;top:0}
+  .team-grid{grid-template-columns:1fr}
+  .quote + .quote{text-align:left}
+  .foot-grid{grid-template-columns:1fr}
+  .price-row{flex-direction:column;gap:6px}
+  .mbar{display:grid;grid-template-columns:auto 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(243,243,236,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .4s ease}
+  .mbar.show{transform:none}
+  .mbar a{justify-content:center;padding:.85em 1.2em}
+}
+/* mobile drawer */
+.drawer{position:fixed;inset:0;z-index:70;background:var(--petal);display:flex;flex-direction:column;padding:24px var(--gutter);transform:translateX(100%);transition:transform .45s cubic-bezier(.7,0,.2,1);visibility:hidden}
+.drawer.open{transform:none;visibility:visible}
+.drawer-top{display:flex;justify-content:space-between;align-items:center}
+
+.drawer-close{width:44px;height:44px;font-size:2rem;line-height:1}
+.drawer ul{list-style:none;margin-top:48px;display:grid;gap:18px}
+.drawer ul a{font-family:var(--serif);font-size:2.2rem;text-decoration:none}
+.drawer .btn{margin-top:auto;justify-content:center}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="vmark" viewBox="0 0 160 200">
+    <path d="M10 34h34l-4 3 40 120 40-120-4-3h34l-8 4-62 158h-2L18 38z" fill="currentColor"/>
+    <g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"><path d="M60 128C72 96 84 62 104 20"/></g>
+    <g fill="currentColor">
+      <path d="M104 18c-14 4-20 18-15 30 11-4 17-17 15-30z"/>
+      <path d="M92 50c16-9 32-7 40 3-12 9-29 8-40-3z"/>
+      <path d="M82 76c-12-13-29-15-40-8 8 13 26 17 40 8z"/>
+      <path d="M76 98c16-8 33-5 41 5-13 9-30 7-41-5z"/>
+    </g>
+  </symbol>
+</svg>
+
+<a class="sr-only" href="#book">Skip to booking</a>
+
+<div class="announce">Your first consultation is free. <a href="#book">Pick a time that suits you</a></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Velora Med Spa home">
+      <svg class="brand-mark" viewBox="0 0 160 200" aria-hidden="true"><use href="#vmark"/></svg>
+      <span class="brand-word">VELORA<small>MED SPA</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#treatments">Treatments</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#visit">Your first visit</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+13316002304">(331) 600-2304</a>
+      <a class="btn btn-primary" href="#book">Book free consultation</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="drawer" id="drawer" aria-label="Mobile">
+  <div class="drawer-top">
+    <span class="brand"><svg class="brand-mark" viewBox="0 0 160 200" aria-hidden="true"><use href="#vmark"/></svg><span class="brand-word">VELORA<small>MED SPA</small></span></span>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+  </div>
+  <ul>
+    <li><a href="#treatments">Treatments</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#visit">Your first visit</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a class="btn btn-primary" href="#book">Book free consultation</a>
+</nav>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="hero-where">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        Block 37, 108 N State St, downtown Chicago
+      </p>
+      <h1 aria-label="Look rested. Not done.">
+        <span class="ln" aria-hidden="true"><span>Look rested.</span></span>
+        <span class="ln" aria-hidden="true"><span>Not done.</span></span>
+      </h1>
+      <p class="lede">Non-surgical lifting, Botox, LED therapy and facials, planned by a medical director with more than 15 years in aesthetic medicine. You leave looking like yourself, with no surgery and no downtime.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#book">Book a free consultation
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="#results">See real results</a>
+      </div>
+      <ul class="hero-facts">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>No surgery</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Back to your day straight after</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Physician-led care</li>
+      </ul>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg class="leaf-mark" viewBox="0 0 160 200">
+        <!-- the Velora "V" with its leaf sprig, drawn as line art -->
+        <path class="draw" d="M14 40 L80 190 L146 40"/>
+        <path class="draw" d="M56 120 C 70 90, 82 60, 100 18"/>
+        <path class="draw" d="M100 18 C 88 22, 82 34, 86 46 C 96 42, 102 30, 100 18 Z"/>
+        <path class="draw" d="M90 48 C 106 40, 120 42, 128 52 C 116 60, 100 58, 90 48 Z"/>
+        <path class="draw" d="M80 72 C 68 60, 52 58, 42 64 C 50 76, 66 80, 80 72 Z"/>
+        <path class="draw" d="M74 92 C 90 84, 106 88, 114 98 C 100 106, 84 104, 74 92 Z"/>
+      </svg>
+      <div class="arch arch-main"><img class="parallax" src="https://veloramedspa.com/wp-content/uploads/2025/04/tenweb_media_sbufp6uex-768x768.webp" alt="" width="768" height="768"></div>
+      <div class="arch arch-small"><img class="parallax" src="https://veloramedspa.com/wp-content/uploads/2025/04/tenweb_media_rggmofok8.webp" alt="" width="600" height="600"></div>
+      <div class="hero-badge"><strong>Free consultation</strong><span>A personal plan before you commit to anything</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TREATMENTS ================= -->
+<section class="section" id="treatments">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Treatments</h2>
+      <p>Each treatment fits into a plan built around your skin and your goals. Prices are listed where they are fixed. Everything else is quoted at your free consultation.</p>
+    </div>
+
+    <ul class="menu">
+      <li class="menu-group">Face &amp; neck</li>
+      <li><a href="#book" data-img="0">
+        <img class="thumb" src="https://veloramedspa.com/wp-content/uploads/2025/04/tenweb_media_stmsb80hh.webp" alt="" loading="lazy">
+        <h3>Non-surgical face &amp; neck lift</h3>
+        <span class="desc">Firms the jawline and softens a tired neck with advanced, non-invasive technology.</span>
+        <span class="price">Quoted<small>at consultation</small></span>
+      </a></li>
+      <li><a href="#book" data-img="1">
+        <img class="thumb" src="https://veloramedspa.com/wp-content/uploads/2025/04/tenweb_media_sdtmtmzrv.webp" alt="" loading="lazy">
+        <h3>Botox</h3>
+        <span class="desc">Smooths expression lines and fine wrinkles, with results you see within days.</span>
+        <span class="price">$14<small>per unit</small></span>
+      </a></li>
+      <li><a href="#book" data-img="2">
+        <img class="thumb" src="https://veloramedspa.com/wp-content/uploads/2025/04/tenweb_media_s5catzn0h.webp" alt="" loading="lazy">
+        <h3>LED &amp; red light therapy</h3>
+        <span class="desc">Boosts collagen, calms inflammation and helps skin repair itself.</span>
+        <span class="price">Quoted<small>at consultation</small></span>
+      </a></li>
+      <li><a href="#book" data-img="3">
+        <img class="thumb" src="https://veloramedspa.com/wp-content/uploads/2025/04/tenweb_media_siqyksjxm.webp" alt="" loading="lazy">
+        <h3>Personalized facials</h3>
+        <span class="desc">Designed by our estheticians for your skin type, season and concerns.</span>
+        <span class="price">Quoted<small>at consultation</small></span>
+      </a></li>
+      <li><a href="#book" data-img="4">
+        <img class="thumb" src="https://veloramedspa.com/wp-content/uploads/2025/04/tenweb_media_stddba1qj.webp" alt="" loading="lazy">
+        <h3>Acne, sun &amp; age spots</h3>
+        <span class="desc">Clears breakouts and evens out pigmentation for a brighter, more even tone.</span>
+        <span class="price">Quoted<small>at consultation</small></span>
+      </a></li>
+
+      <li class="menu-group">Body</li>
+      <li><a href="#book" data-img="5">
+        <img class="thumb" src="https://veloramedspa.com/wp-content/uploads/2025/04/tenweb_media_svjbufqz3.webp" alt="" loading="lazy">
+        <h3>EMS Body Sculpt Neo</h3>
+        <span class="desc">Builds muscle and reduces fat in one session series, without surgery.</span>
+        <span class="price">$2,500<small>full series</small></span>
+      </a></li>
+      <li><a href="#book" data-img="6">
+        <img class="thumb" src="https://veloramedspa.com/wp-content/uploads/2025/04/tenweb_media_swatehasf.webp" alt="" loading="lazy">
+        <h3>Lymphatic drainage &amp; Lipomassage</h3>
+        <span class="desc">Reduces cellulite and puffiness and firms the skin, in sessions tailored to you.</span>
+        <span class="price">Quoted<small>at consultation</small></span>
+      </a></li>
+      <li><a href="#book" data-img="7">
+        <img class="thumb" src="https://veloramedspa.com/wp-content/uploads/2025/04/tenweb_media_sbufp6uex-600x600.webp" alt="" loading="lazy">
+        <h3>24K body treatment</h3>
+        <span class="desc">A gold-infused treatment that leaves skin hydrated, smooth and glowing.</span>
+        <span class="price">Quoted<small>at consultation</small></span>
+      </a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- floating hover preview (desktop) -->
+<div class="preview" id="preview" aria-hidden="true">
+  <img src="https://veloramedspa.com/wp-content/uploads/2025/04/tenweb_media_stmsb80hh.webp" alt="">
+  <img src="https://veloramedspa.com/wp-content/uploads/2025/04/tenweb_media_sdtmtmzrv.webp" alt="">
+  <img src="https://veloramedspa.com/wp-content/uploads/2025/04/tenweb_media_s5catzn0h.webp" alt="">
+  <img src="https://veloramedspa.com/wp-content/uploads/2025/04/tenweb_media_siqyksjxm.webp" alt="">
+  <img src="https://veloramedspa.com/wp-content/uploads/2025/04/tenweb_media_stddba1qj.webp" alt="">
+  <img src="https://veloramedspa.com/wp-content/uploads/2025/04/tenweb_media_svjbufqz3.webp" alt="">
+  <img src="https://veloramedspa.com/wp-content/uploads/2025/04/tenweb_media_swatehasf.webp" alt="">
+  <img src="https://veloramedspa.com/wp-content/uploads/2025/04/tenweb_media_sbufp6uex-600x600.webp" alt="">
+</div>
+
+<!-- ================= RESULTS ================= -->
+<section class="section results" id="results">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Real clients, real results</h2>
+      <p>Drag the slider to compare. These are Velora clients, photographed before treatment and after their series.</p>
+    </div>
+    <div class="ba-grid">
+      <figure>
+        <div class="ba" style="--src:url('https://veloramedspa.com/wp-content/uploads/2025/04/69AAC75B-83B2-415D-9C4E-01C27A71CCBA.jpg');--ratio:250/338">
+          <div class="img before"></div>
+          <div class="img after"></div>
+          <div class="handle"></div>
+          <span class="tag l">Before</span><span class="tag r">After</span>
+          <input type="range" min="0" max="100" value="50" aria-label="Compare before and after, face lift">
+        </div>
+        <figcaption class="ba-cap"><strong>Non-surgical face lift.</strong> Smoother forehead, lifted brow and a fresher eye area.</figcaption>
+      </figure>
+      <figure>
+        <div class="ba" style="--src:url('https://veloramedspa.com/wp-content/uploads/2025/04/64679b53-0a87-451d-bc0c-782f0187d44d.jpg');--ratio:250/280">
+          <div class="img before"></div>
+          <div class="img after"></div>
+          <div class="handle"></div>
+          <span class="tag l">Before</span><span class="tag r">After</span>
+          <input type="range" min="0" max="100" value="50" aria-label="Compare before and after, skin renewal">
+        </div>
+        <figcaption class="ba-cap"><strong>LED &amp; facial series.</strong> More even tone and visibly softer fine lines.</figcaption>
+      </figure>
+    </div>
+    <p class="ba-note">Results vary from person to person. Your practitioner will talk you through realistic outcomes at your consultation.</p>
+  </div>
+</section>
+
+<!-- ================= FIRST VISIT (a real sequence) ================= -->
+<section class="section" id="visit">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Your first visit</h2>
+      <p>No pressure and no surprises. You'll know exactly what's recommended, why, and what it costs before anything begins.</p>
+    </div>
+    <div class="steps">
+      <div class="stem" aria-hidden="true"><i></i></div>
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Free consultation</h3>
+        <p>Tell us what bothers you when you look in the mirror. We assess your skin and listen to what you want.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Your personal plan</h3>
+        <p>Our medical director recommends the treatments that fit your goals, with clear pricing and payment plan options.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Treatment &amp; follow-up</h3>
+        <p>Treatments are non-surgical, so you go straight back to your day. We check in to track your results.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OFFER ================= -->
+<section class="section offer" id="packages">
+  <div class="wrap offer-grid">
+    <div class="offer-photo"><img class="parallax" src="https://veloramedspa.com/wp-content/uploads/2025/04/tenweb_media_siqyksjxm.webp" alt="A client relaxing during a personalized facial at Velora" loading="lazy"></div>
+    <div>
+      <h2>The Ultimate Package</h2>
+      <p class="lede" style="margin-top:20px">Our most complete program, covering face, neck and body, for results that last.</p>
+      <div class="price-card">
+        <div class="price-row">
+          <div><h3>Ultimate facial package</h3><p>8 facials and body care sessions, with a personalized plan</p></div>
+          <span class="amt">$1,799</span>
+        </div>
+        <div class="price-row">
+          <div><h3>EMS Body Sculpt Neo</h3><p>Full series to build muscle and reduce fat</p></div>
+          <span class="amt">$2,500</span>
+        </div>
+      </div>
+      <a class="btn btn-primary" href="#book">Ask about packages at your free consultation</a>
+      <small>Payment plans available. Ask us at your consultation.</small>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section class="section" id="team">
+  <div class="wrap team-grid">
+    <div class="person">
+      <img src="https://veloramedspa.com/wp-content/uploads/2025/04/tenweb_media_sdtmtmzrv.webp" alt="Dr. Emily Carter" loading="lazy">
+      <h3>Dr. Emily Carter</h3>
+      <p class="role">Medical Director</p>
+      <p>More than 15 years in aesthetic medicine. Dr. Carter oversees every treatment plan.</p>
+    </div>
+    <div class="person">
+      <img src="https://veloramedspa.com/wp-content/uploads/2025/04/tenweb_media_sxmpms89x.webp" alt="Sarah Johnson" loading="lazy">
+      <h3>Sarah Johnson</h3>
+      <p class="role">Lead Aesthetician</p>
+      <p>Trained in dermatology, Sarah designs the facials and skincare routines our clients rely on.</p>
+    </div>
+    <div class="team-intro">
+      <h2>Medical expertise, a gentle touch</h2>
+      <p>Every plan at Velora is overseen by our medical director, so you get treatments that are safe, effective and right for your skin. Michael Lee, our client relations manager, makes sure every visit runs smoothly from the moment you arrive.</p>
+      <a class="btn btn-ghost" href="#book">Meet us at a free consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="section quotes" aria-label="What clients say">
+  <div class="wrap">
+    <figure class="quote">
+      <blockquote>“Velora's non-surgical face lift changed my life.”</blockquote>
+      <figcaption>Sarah Brown, face lift client</figcaption>
+    </figure>
+    <figure class="quote">
+      <blockquote>“My skin has never looked better after the LED treatments. Highly recommended!”</blockquote>
+      <figcaption>Jessica Thompson, LED therapy client</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section" id="faq">
+  <div class="wrap faq-grid">
+    <div>
+      <h2>Questions, answered</h2>
+      <p>Still unsure? Call us at <a href="tel:+13316002304">(331) 600-2304</a> and we'll walk you through it.</p>
+    </div>
+    <div>
+      <details>
+        <summary>Is the consultation really free?<span class="pm" aria-hidden="true"></span></summary>
+        <p class="ans">Yes. Your first consultation costs nothing and you don't have to book anything afterwards. It's time to ask questions and get an honest recommendation.</p>
+      </details>
+      <details>
+        <summary>Is there any downtime?<span class="pm" aria-hidden="true"></span></summary>
+        <p class="ans">Our treatments are non-surgical. Most clients go straight back to work or their day. Your practitioner will tell you about any short-term redness or aftercare for your specific treatment.</p>
+      </details>
+      <details>
+        <summary>How many sessions will I need?<span class="pm" aria-hidden="true"></span></summary>
+        <p class="ans">It depends on the treatment and your goals. Botox is usually a single visit, while lifting, LED and body treatments work best as a series. Your plan will spell out the number of sessions and the cost before you start.</p>
+      </details>
+      <details>
+        <summary>Do you offer payment plans?<span class="pm" aria-hidden="true"></span></summary>
+        <p class="ans">Yes. Ask about payment plans at your consultation and we'll find an option that works for your budget.</p>
+      </details>
+      <details>
+        <summary>How do I book?<span class="pm" aria-hidden="true"></span></summary>
+        <p class="ans">Use the form below. It takes about 30 seconds. Or call our front desk at (331) 600-2304.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BOOKING ================= -->
+<section class="section book" id="book">
+  <div class="wrap book-grid">
+    <div>
+      <h2>Book your free consultation</h2>
+      <p class="lede" style="margin-top:20px">Three quick questions, then we'll call you to confirm a time.</p>
+      <div class="visit">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          <p><strong>Block 37</strong><span>108 N State St, Chicago, IL 60602</span></p>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+          <p><strong>Call or text</strong><a href="tel:+13316002304">(331) 600-2304</a></p>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6 8.5-6"/></svg>
+          <p><strong>Email</strong><a href="mailto:veloramedspa@gmail.com">veloramedspa@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="map">
+        <iframe title="Map to Velora Med Spa at Block 37" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Block+37,+108+N+State+St,+Chicago,+IL+60602&output=embed"></iframe>
+      </div>
+    </div>
+
+    <form class="form" id="bookForm" novalidate>
+      <div class="progress" aria-hidden="true"><i class="done"></i><i></i><i></i></div>
+
+      <fieldset class="fstep active" data-step="0">
+        <legend>What would you like to work on?</legend>
+        <p class="hint">Choose as many as you like.</p>
+        <div class="chips">
+          <label class="chip"><input type="checkbox" name="goal" value="Lines & wrinkles"><span>Lines &amp; wrinkles</span></label>
+          <label class="chip"><input type="checkbox" name="goal" value="Lift & firm face or neck"><span>Lift &amp; firm face or neck</span></label>
+          <label class="chip"><input type="checkbox" name="goal" value="Acne or spots"><span>Acne or spots</span></label>
+          <label class="chip"><input type="checkbox" name="goal" value="Glow & hydration"><span>Glow &amp; hydration</span></label>
+          <label class="chip"><input type="checkbox" name="goal" value="Body contouring"><span>Body contouring</span></label>
+          <label class="chip"><input type="checkbox" name="goal" value="Not sure yet"><span>Not sure yet</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="fstep" data-step="1">
+        <legend>When suits you best?</legend>
+        <p class="hint">We'll offer the nearest time that fits.</p>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="when" value="Weekday morning"><span>Weekday morning</span></label>
+          <label class="chip"><input type="radio" name="when" value="Weekday afternoon"><span>Weekday afternoon</span></label>
+          <label class="chip"><input type="radio" name="when" value="After work"><span>After work</span></label>
+          <label class="chip"><input type="radio" name="when" value="Weekend"><span>Weekend</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="fstep" data-step="2">
+        <legend>Where should we reach you?</legend>
+        <p class="hint">We only use this to confirm your consultation.</p>
+        <label class="field"><span>Full name</span><input name="name" autocomplete="name" required></label>
+        <label class="field"><span>Phone</span><input name="phone" type="tel" autocomplete="tel" required></label>
+        <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email" required></label>
+      </fieldset>
+
+      <div class="success" id="success" role="status" aria-live="polite">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="32" cy="32" r="29"/><path class="check" d="M20 33l8 8 16-17"/></svg>
+        <h3>Consultation requested</h3>
+        <p>Thank you. We'll call you shortly to confirm a time.</p>
+      </div>
+
+      <p class="err" id="err" role="alert"></p>
+      <div class="form-nav" id="formNav">
+        <button type="button" class="back" id="backBtn" hidden>Back</button>
+        <button type="submit" class="btn btn-primary" id="nextBtn">Continue</button>
+      </div>
+      <p class="fine" id="fine">Free, with no obligation. Your details are never shared.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-word">VELORA<small>MED SPA</small></div>
+        <p style="margin-top:22px;max-width:22em">Non-invasive treatments that bring out your natural beauty, in downtown Chicago.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul><li>Block 37</li><li>108 N State St</li><li>Chicago, IL 60602</li></ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul><li><a href="tel:+13316002304">(331) 600-2304</a></li><li><a href="mailto:veloramedspa@gmail.com">veloramedspa@gmail.com</a></li><li><a href="#book">Book a consultation</a></li></ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul><li><a href="https://www.instagram.com/velorachicago/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/profile.php?id=61575793403566" target="_blank" rel="noopener">Facebook</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Velora Med Spa</span>
+      <span>Concept redesign prepared for Velora Med Spa</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a class="btn btn-ghost" href="tel:+13316002304" aria-label="Call Velora">Call</a>
+  <a class="btn btn-primary" href="#book">Book free consultation</a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(() => {
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+
+  /* ---- nav state + mobile bar ---- */
+  const nav = $('#nav'), mbar = $('#mbar'), book = $('#book');
+  let bookVisible = false;
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(([e]) => { bookVisible = e.isIntersecting; onScroll(); }, { threshold: .15 }).observe(book);
+  }
+  function onScroll() {
+    const y = window.scrollY;
+    nav.classList.toggle('scrolled', y > 10);
+    mbar.classList.toggle('show', y > window.innerHeight * .6 && !bookVisible);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ---- drawer ---- */
+  const drawer = $('#drawer'), menuBtn = $('#menuBtn');
+  const setDrawer = open => {
+    drawer.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+    if (open) $('#drawerClose').focus();
+  };
+  menuBtn.addEventListener('click', () => setDrawer(true));
+  $('#drawerClose').addEventListener('click', () => setDrawer(false));
+  $$('#drawer a').forEach(a => a.addEventListener('click', () => setDrawer(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && drawer.classList.contains('open')) { setDrawer(false); menuBtn.focus(); } });
+
+  /* ---- before / after sliders ---- */
+  $$('.ba').forEach(ba => {
+    const input = $('input', ba);
+    const set = v => ba.style.setProperty('--pos', v + '%');
+    input.addEventListener('input', () => set(input.value));
+    ba._set = v => { input.value = v; set(v); };
+  });
+
+  /* ---- booking form ---- */
+  const form = $('#bookForm'), steps = $$('.fstep', form), bars = $$('.progress i', form);
+  const nextBtn = $('#nextBtn'), backBtn = $('#backBtn'), err = $('#err');
+  let cur = 0;
+  const labels = ['Continue', 'Continue', 'Request my consultation'];
+  function show(i) {
+    steps.forEach((s, k) => s.classList.toggle('active', k === i));
+    bars.forEach((b, k) => b.classList.toggle('done', k <= i));
+    backBtn.hidden = i === 0;
+    nextBtn.textContent = labels[i];
+    err.textContent = '';
+    cur = i;
+    if (window.gsap && !reduce) gsap.from(steps[i], { autoAlpha: 0, x: 24, duration: .45, ease: 'power2.out' });
+  }
+  function validate(i) {
+    if (i === 0 && !$$('input[name="goal"]:checked', form).length) return 'Choose at least one option to continue.';
+    if (i === 1 && !$('input[name="when"]:checked', form)) return 'Choose a time of day to continue.';
+    if (i === 2) {
+      let msg = '';
+      $$('.field input', form).forEach(inp => {
+        const ok = inp.value.trim() && (inp.type !== 'email' || /^\S+@\S+\.\S+$/.test(inp.value)) && (inp.type !== 'tel' || inp.value.replace(/\D/g, '').length >= 10);
+        inp.setAttribute('aria-invalid', !ok);
+        if (!ok && !msg) msg = inp.type === 'email' ? 'Enter a valid email address, like name@example.com.' : inp.type === 'tel' ? 'Enter a phone number with at least 10 digits.' : 'Enter your full name.';
+      });
+      return msg;
+    }
+    return '';
+  }
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const m = validate(cur);
+    if (m) { err.textContent = m; return; }
+    if (cur < steps.length - 1) return show(cur + 1);
+    // Demo: no backend. Swap this for Formspree / CRM webhook when going live.
+    steps.forEach(s => s.classList.remove('active'));
+    $('#formNav').style.display = 'none'; $('#fine').style.display = 'none'; err.textContent = '';
+    bars.forEach(b => b.classList.add('done'));
+    const ok = $('#success'); ok.classList.add('active');
+    if (window.gsap && !reduce) {
+      const p = $('.check', ok), L = p.getTotalLength();
+      gsap.fromTo(p, { strokeDasharray: L, strokeDashoffset: L }, { strokeDashoffset: 0, duration: .8, ease: 'power2.out', delay: .15 });
+      gsap.from(ok.children, { y: 14, autoAlpha: 0, stagger: .08, duration: .5 });
+    }
+  });
+  backBtn.addEventListener('click', () => cur > 0 && show(cur - 1));
+
+  /* ---- GSAP motion ---- */
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!window.gsap || reduce) return;
+  gsap.registerPlugin(ScrollTrigger);
+
+  // 1. The single orchestrated moment: hero load. The leaf V draws itself, the headline rises, the arches open.
+  const draws = $$('.leaf-mark .draw');
+  draws.forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = L; });
+  const tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
+  tl.from('.hero h1 .ln > span', { yPercent: 110, duration: 1.3, stagger: .12 }, .1)
+    .from('.arch-main', { clipPath: 'inset(100% 0% 0% 0% round 999px 999px 18px 18px)', duration: 1.5, ease: 'expo.inOut' }, 0)
+    .from('.arch-main img', { scale: 1.25, duration: 1.8 }, 0)
+    .from('.arch-small', { yPercent: 30, autoAlpha: 0, duration: 1.2 }, .55)
+    .to(draws, { strokeDashoffset: 0, duration: 1.6, stagger: .12, ease: 'power2.inOut' }, .6)
+    .from('.hero-where, .hero .lede, .hero-actions, .hero-facts', { y: 20, autoAlpha: 0, duration: .9, stagger: .08 }, .45)
+    .from('.hero-badge', { y: 20, autoAlpha: 0, scale: .94, duration: .8 }, 1.2);
+
+  // 2. Gentle parallax inside the arch frames.
+  $$('.parallax').forEach(img => {
+    gsap.fromTo(img, { yPercent: -6 }, { yPercent: 6, ease: 'none', scrollTrigger: { trigger: img.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } });
+  });
+
+  // 3. First-visit stem fills as you read the three steps (it shows progress through a real sequence).
+  const mm = gsap.matchMedia();
+  mm.add('(min-width: 721px)', () => {
+    gsap.to('.stem i', { scaleX: 1, ease: 'none', scrollTrigger: { trigger: '.steps', start: 'top 75%', end: 'bottom 55%', scrub: .6 } });
+  });
+  mm.add('(max-width: 720px)', () => {
+    gsap.to('.stem i', { scaleY: 1, ease: 'none', scrollTrigger: { trigger: '.steps', start: 'top 70%', end: 'bottom 60%', scrub: .6 } });
+  });
+
+  // 4. Before/after sliders sweep once to show they can be dragged.
+  $$('.ba').forEach((ba, i) => {
+    const o = { v: 50 };
+    gsap.timeline({ scrollTrigger: { trigger: ba, start: 'top 70%', once: true }, delay: i * .25 })
+      .to(o, { v: 22, duration: .9, ease: 'power2.inOut', onUpdate: () => ba._set(o.v) })
+      .to(o, { v: 78, duration: 1.2, ease: 'power2.inOut', onUpdate: () => ba._set(o.v) })
+      .to(o, { v: 50, duration: .9, ease: 'power2.inOut', onUpdate: () => ba._set(o.v) });
+  });
+
+  // 5. Treatment menu: an arched photo follows the cursor (pointer devices only).
+  mm.add('(hover: hover) and (min-width: 721px)', () => {
+    const pv = $('#preview'), imgs = $$('img', pv);
+    gsap.set(pv, { xPercent: -50, yPercent: -50, scale: .8, autoAlpha: 0 });
+    const xTo = gsap.quickTo(pv, 'x', { duration: .5, ease: 'power3' });
+    const yTo = gsap.quickTo(pv, 'y', { duration: .5, ease: 'power3' });
+    // Show the photo only while the pointer is actually over a treatment row.
+    // Checked on every move (not mouseenter/leave), because Safari skips
+    // mouseleave when the page scrolls under a still cursor, e.g. after clicking "#book".
+    let active = -1;
+    const hide = () => {
+      if (active === -1) return;
+      active = -1;
+      gsap.to(pv, { autoAlpha: 0, scale: .8, duration: .25, overwrite: 'auto' });
+    };
+    const update = (x, y) => {
+      const el = document.elementFromPoint(x, y);
+      const row = el && el.closest('.menu a');
+      if (!row) return hide();
+      const k = +row.dataset.img;
+      if (k !== active) {
+        imgs.forEach((im, j) => im.classList.toggle('on', j === k));
+        if (active === -1) gsap.to(pv, { autoAlpha: 1, scale: 1, duration: .4, ease: 'power3.out', overwrite: 'auto' });
+        active = k;
+      }
+    };
+    const move = e => { xTo(e.clientX + 170); yTo(e.clientY); update(e.clientX, e.clientY); };
+    const onScroll = () => hide();
+    const onClick = e => { if (e.target.closest('.menu a')) hide(); };
+    window.addEventListener('mousemove', move, { passive: true });
+    window.addEventListener('scroll', onScroll, { passive: true });
+    document.addEventListener('click', onClick);
+    document.documentElement.addEventListener('mouseleave', hide);
+    return () => {
+      window.removeEventListener('mousemove', move);
+      window.removeEventListener('scroll', onScroll);
+      document.removeEventListener('click', onClick);
+      document.documentElement.removeEventListener('mouseleave', hide);
+      gsap.set(pv, { autoAlpha: 0 });
+    };
+  });
+})();
+</script>
+</body>
+</html>
